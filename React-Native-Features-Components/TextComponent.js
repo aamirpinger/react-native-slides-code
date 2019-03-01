@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, StyleSheet } from 'react-native';
+import { Text, StyleSheet } from 'react-native'
 
 export default class TextComponent extends Component {
     render() {
