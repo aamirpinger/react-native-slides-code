@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
-import { TouchableOpacity, Text, StyleSheet, View } from 'react-native';
+import {
+  TouchableOpacity,
+  Text,
+  StyleSheet,
+  View
+} from 'react-native';
 import Modal from 'react-native-modal';
 
 // **********************************************************
