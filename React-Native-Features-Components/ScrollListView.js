@@ -1,5 +1,9 @@
 import React from 'react';
-import { Text, View, ScrollView } from 'react-native'
+import {
+    ScrollView,
+    Text,
+    View,
+} from 'react-native'
 
 function ScrollListView() {
     const names = [
