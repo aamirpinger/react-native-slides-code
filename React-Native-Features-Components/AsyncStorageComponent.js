@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
-import {Button, AsyncStorage, StyleSheet, View, Text, TextInput } from 'react-native';
+import {
+    AsyncStorage,
+    Button,
+    View,
+    Text,
+    TextInput
+} from 'react-native';
 
 export default class asyncStorageComponent extends Component {
     state = {
@@ -17,26 +23,21 @@ export default class asyncStorageComponent extends Component {
     componentDidMount() {
         AsyncStorage.getAllKeys()
             .then((v) => {
-                AsyncStorage.multiGet((v),(err,data) => {
+                AsyncStorage.multiGet((v), (err, data) => {
                     if (!err) {
                         data.map((rec) => {
                             this.setState((ps) => (
                                 {
-                                    [rec[0]] : rec[1]
+                                    [rec[0]]: rec[1]
                                 }
-                            ))                           
-
+                            ))
                         })
                     }
                     else {
                         console.log("error retreiving data")
                     }
-                    
                 })
-                
-                
-            }
-            )
+            })
     }
     render() {
         return (
@@ -62,8 +63,8 @@ export default class asyncStorageComponent extends Component {
                     {this.state.txt_lname}
                 </Text>
                 <Button title="get date" onPress={() => {
-                    AsyncStorage.getItem("txt_fname",(e,v) => console.log(e,"e",v,"v"))
-                    .then((val) => console.log(val,"val"))
+                    AsyncStorage.getItem("txt_fname", (err, result) => console.log(err, "this is error", result, "this is result"))
+                        .then((val) => console.log(val, "value"))
 
                 }}
                 />
@@ -71,12 +72,4 @@ export default class asyncStorageComponent extends Component {
         );
     }
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-})
 
