@@ -1,5 +1,16 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, Switch, Image, TextInput, KeyboardAvoidingView } from 'react-native'
+import {
+    Switch,
+    KeyboardAvoidingView,
+    StyleSheet,
+    Image,
+    TextInput,
+} from 'react-native'
+
+//*************************************************/
+// You can further read switches at:
+//https://facebook.github.io/react-native/docs/switch
+//*************************************************/
 
 export default class SwitchTextbox extends Component {
     state = {
@@ -45,7 +56,6 @@ export default class SwitchTextbox extends Component {
         )
     }
 }
-//https://facebook.github.io/react-native/docs/switch
 
 const styles = StyleSheet.create({
     container: {
