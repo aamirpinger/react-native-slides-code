@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import {
-  AppRegistry,
   StyleSheet,
   TouchableHighlight,
   Text,
@@ -27,11 +26,19 @@ class Touchable extends Component {
     return (
       <View style={styles.container}>
         {
-          // you can also try
+          //********************************************************/
+          // you can also try below
           //    Button
           //    TouchableOpacity
           //    TouchableNativeFeedback
           //    TouchableWithoutFeedback
+          //
+          // Don't forget to import whatever option you use from above
+          //
+          // refer following for further read
+          //
+          // https://facebook.github.io/react-native/docs/handling-touches
+          //********************************************************/
         }
         <TouchableHighlight
           style={styles.button}
@@ -77,5 +84,4 @@ const styles = StyleSheet.create({
   }
 })
 
-//AppRegistry.registerComponent('App', () => App)
 export default Touchable
