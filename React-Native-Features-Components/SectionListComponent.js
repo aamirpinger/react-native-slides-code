@@ -1,5 +1,9 @@
 import React from 'react';
-import { Text, View, SectionList } from 'react-native'
+import {
+    SectionList,
+    Text,
+    View,
+} from 'react-native'
 
 function SectionListComponent() {
     return (
